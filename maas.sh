@@ -11,3 +11,6 @@ exit
 sudo maas init region+rack --maas-url http://localhost:5240/MAAS --database-uri postgres://maas:123@localhost/maasdb
 
 sudo maas createadmin --username admin --password 123 --email 20004128@st.vlute.edu.vn --ssh-import sh:NguyenHNhan
+
+
+sudo iptables -t nat -A PREROUTING -p tcp --dport 17070 -j DNAT --to-destination 10.74.152.78:17070
